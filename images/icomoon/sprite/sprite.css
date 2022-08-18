@@ -1,0 +1,86 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-astronaut-1 {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-diagram-1 {
+  width: 32px;
+  height: 32px;
+  background-position: -48px 0;
+}
+.icon-clock-1 {
+  width: 32px;
+  height: 32px;
+  background-position: -96px 0;
+}
+.icon-antenna-1 {
+  width: 32px;
+  height: 32px;
+  background-position: -144px 0;
+}
+.icon-Client-1 {
+  width: 59px;
+  height: 32px;
+  background-position: -192px 0;
+}
+.icon-Client-2 {
+  width: 59px;
+  height: 32px;
+  background-position: -288px 0;
+}
+.icon-Client-3 {
+  width: 59px;
+  height: 32px;
+  background-position: -384px 0;
+}
+.icon-Client-4 {
+  width: 59px;
+  height: 32px;
+  background-position: -480px 0;
+}
+.icon-Client-5 {
+  width: 59px;
+  height: 32px;
+  background-position: -576px 0;
+}
+.icon-Client-6 {
+  width: 59px;
+  height: 32px;
+  background-position: -672px 0;
+}
+.icon-envelop {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -96px;
+}
+.icon-mobile {
+  width: 32px;
+  height: 32px;
+  background-position: -48px -96px;
+}
+.icon-facebook {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -96px;
+}
+.icon-instagram {
+  width: 32px;
+  height: 32px;
+  background-position: -144px -96px;
+}
+.icon-twitter {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -96px;
+}
+.icon-linkedin2 {
+  width: 32px;
+  height: 32px;
+  background-position: -240px -96px;
+}
+

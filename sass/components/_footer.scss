@@ -1,0 +1,57 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.footer__address {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: left;
+  padding: 60px 0;
+}
+.address {
+  display: inline-block;
+  &__logo {
+    margin-left: 0px;
+    margin-right: 93px;
+    text-decoration: none;
+  }
+  &__work-place {
+    color: getColor('background-color');
+    font-style: normal;
+    margin-top: 20px;
+  }
+  &__item {
+    margin-top: 9px;
+    @include transition(transform);
+    &:hover,
+    &:focus {
+      transform: translatex(5%);
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: getColor('checkmark-color');
+    }
+  }
+}
+.footer__social-contact {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+.social-contact {
+  display: inline-block;
+
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: getColor('background-color');
+  }
+  &__icons {
+    margin-top: 20px;
+    display: inline-flex;
+  }
+}

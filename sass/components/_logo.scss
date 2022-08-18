@@ -1,0 +1,19 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.logo {
+  font-family: $logo-font, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  text-decoration: none;
+
+  &--blue {
+    color: getColor('checkmark-color');
+  }
+  &--black {
+    color: getColor('third-color');
+  }
+  &--white {
+    color: getColor('background-color');
+  }
+}

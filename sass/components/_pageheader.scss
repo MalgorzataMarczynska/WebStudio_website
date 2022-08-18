@@ -1,0 +1,108 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+%flex__vert-center {
+  display: flex;
+  align-items: center;
+}
+.header {
+  background-color: getColor('background-color');
+
+  &__menu {
+    @extend %flex__vert-center;
+    padding: 24px 0 25px 0;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-left: 0px;
+    margin-right: 93px;
+    text-decoration: none;
+  }
+  &__contact {
+    @extend %flex__vert-center;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 0px;
+    margin-left: 310px;
+  }
+  &__mail {
+    @extend %flex__vert-center;
+    @include transition(transform);
+    margin-right: 30px;
+
+    &:hover,
+    &:focus {
+      transform: translate(-10%);
+    }
+  }
+  &__phone {
+    @extend %flex__vert-center;
+    flex-wrap: nowrap;
+    margin-left: 30px;
+    @include transition(transform);
+
+    &:hover,
+    &:focus {
+      transform: translate(-10%);
+    }
+  }
+  &__icon-item {
+    @extend %flex__vert-center;
+    @include transition(color);
+    color: getColor('secondary-color');
+
+    &:hover,
+    &:focus {
+      color: getColor('checkmark-color');
+    }
+  }
+  &__link {
+    color: currentColor;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+    cursor: pointer;
+  }
+  &__main {
+    @extend %flex__vert-center;
+    padding: 200px 0;
+    flex-direction: column;
+  }
+  &__image {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4) 100%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url('../images/team_photo_opt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__title {
+    width: 696px;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 30px;
+  }
+}
+.background {
+  min-width: 1600px;
+  margin: 0 auto;
+}
+.blue {
+  background-color: #2f303a;
+}
+.main__title {
+  font-weight: 900;
+  font-size: 44px;
+  text-transform: uppercase;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  color: getColor('background-color');
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

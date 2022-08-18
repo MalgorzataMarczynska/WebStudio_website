@@ -1,0 +1,9 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.container {
+  width: $main-width;
+  padding: $main-padding;
+  align-items: center;
+  margin: 0 auto;
+}

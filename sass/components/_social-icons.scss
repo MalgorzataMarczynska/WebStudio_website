@@ -1,0 +1,39 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+%center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icon {
+  @extend %center;
+
+  &__tile {
+    @extend %center;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: getColor('background-color');
+    fill: #afb1b8;
+    cursor: pointer;
+    @include transition(transform);
+    @include transition(color);
+
+    &--footer {
+      background: rgba(255, 255, 255, 0.1);
+      fill: getColor('background-color');
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:hover,
+    &:focus {
+      background-color: getColor('checkmark-color');
+      fill: getColor('background-color');
+      transform: scale(1.15);
+    }
+  }
+}

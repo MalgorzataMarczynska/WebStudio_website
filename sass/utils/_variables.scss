@@ -1,0 +1,16 @@
+$colors: (
+  'background-color': #fff,
+  'brand-color': #212121,
+  'checkmark-color': #2196f3,
+  'secondary-color': #757575,
+  'third-color': #000,
+  'footer-background-color': #2f303a,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+$main-font: 'Roboto';
+$logo-font: 'Raleway';
+$main-padding: 0px 15px;
+$main-width: 1200px;

@@ -1,0 +1,172 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+%flex__vert-center {
+  display: flex;
+  align-items: center;
+}
+.backdrop {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  @include transition-delay(transform);
+  @include transition-delay(background-color);
+  @include transition-delay(visibility);
+  @include transition-delay(opacity);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scaleY(0);
+}
+.backdrop__modal {
+  padding: 40px;
+  box-sizing: border-box;
+  width: 528px;
+  height: 581px;
+  margin: auto;
+  position: relative;
+}
+.modal {
+  background-color: getColor('background-color');
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  cursor: initial;
+  opacity: 1;
+  transform: scaleY(1);
+}
+.modal__modal-x {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 12px 8px 10px 10px;
+}
+.modal-x {
+  border-radius: 50%;
+  background-color: getColor('background-color');
+  font-family: $main-font, $logo-font, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  @include transition-delay(background-color);
+  @include transition-delay(transform);
+  @include transition-delay(box-shadow);
+}
+.form {
+  background-color: getColor('background-color');
+
+  &__header {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  &__title {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: getColor('secondary-color');
+    position: relative;
+  }
+  &__input {
+    height: 40px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 35px;
+
+    &:focus {
+      border: 1px solid getColor('checkmark-color');
+    }
+    &::placeholder {
+      font-size: 12px;
+      color: rgba(117, 117, 117, 0.5);
+      letter-spacing: 0.01em;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 30px;
+    left: 12px;
+  }
+  &__textarea {
+    resize: none;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+
+    &:focus {
+      border: 1px solid getColor('checkmark-color');
+    }
+
+    &::placeholder {
+      font-size: 12px;
+      color: rgba(117, 117, 117, 0.5);
+      letter-spacing: 0.01em;
+    }
+  }
+  &__items:focus-within {
+    fill: getColor('checkmark-color');
+  }
+  &__policy {
+    @extend %flex__vert-center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+.input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  color: getColor('brand-color');
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  @include transition(border);
+}
+.policy {
+  position: relative;
+
+  &__check-icon {
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    width: 100%;
+    fill: getColor('brand-color');
+    z-index: 4;
+  }
+  &__checkbox {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 15px;
+    background-color: getColor('background-color');
+    border: 2px solid getColor('brand-color');
+
+    &:checked {
+      background-color: getColor('checkmark-color');
+      border: 0px;
+      border-radius: 2px;
+    }
+  }
+  &__label {
+    color: getColor('secondary-color');
+    margin-left: 8px;
+  }
+  &__link {
+    color: getColor('checkmark-color');
+  }
+}

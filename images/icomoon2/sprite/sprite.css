@@ -1,0 +1,36 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-check-sign {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-checkbox-empty {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -32px;
+}
+.icon-form-mail {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -64px;
+}
+.icon-form-phone {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -96px;
+}
+.icon-person {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -128px;
+}
+.icon-icon-send {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -160px;
+}
+
