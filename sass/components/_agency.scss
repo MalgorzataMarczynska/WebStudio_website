@@ -7,32 +7,219 @@
   align-items: center;
 }
 .section {
-  padding: 94px 0px;
+  padding: 60px 0px;
+}
 
-  &__tile {
-    @include grid(30px, 4);
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0px;
   }
-  &__article {
-    @include grid(30px, 4);
-    flex-wrap: nowrap;
+}
+.section {
+  &__image {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4) 100%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url('../images/team_photo_mobile_opt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    &__image {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4) 100%,
+          rgba(47, 48, 58, 0.4) 100%
+        ),
+        ('../images/team_photo_mobile@2x_opt.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__image {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4) 100%,
+          rgba(47, 48, 58, 0.4) 100%
+        ),
+        url('../images/team_photo_tablet_opt.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      &__image {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4) 100%,
+            rgba(47, 48, 58, 0.4) 100%
+          ),
+          ('../images/team_photo_tablet_opt@2x.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__image {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4) 100%,
+          rgba(47, 48, 58, 0.4) 100%
+        ),
+        url('../images/team_photo_opt.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      &__image {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4) 100%,
+            rgba(47, 48, 58, 0.4) 100%
+          ),
+          ('../images/team_photo_opt@2x.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &__main {
+    @extend %flex__vert-center;
+    padding: 118px 0;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    &__main {
+      padding: 200px 0;
+      margin-bottom: 94px;
+    }
   }
   &__title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    &__title {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+  }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    &__article {
+      @include grid-tablet(30px, 2);
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__article {
+      @include grid(30px, 4);
+      flex-wrap: nowrap;
+    }
   }
   &__description-gallery {
-    @include grid(30px, 3);
-    flex-wrap: nowrap;
+    display: block;
     z-index: 2;
+  }
+  @media screen and (min-width: 768px) {
+    &__description-gallery {
+      @include grid-tablet(30px, 2);
+      flex-wrap: wrap;
+      z-index: 2;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__description-gallery {
+      @include grid(30px, 3);
+      flex-wrap: nowrap;
+      z-index: 2;
+    }
   }
   &__company-logotype {
     @extend %center;
+    @include grid-tablet(30px, 2);
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) {
+    &__company-logotype {
+      @include grid-tablet(30px, 3);
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__company-logotype {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.main__title {
+  max-width: 365px;
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  color: getColor('background-color');
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .main__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+.background {
+  max-width: 100vw;
+  margin: 0 auto;
+}
+.main__title {
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  color: getColor('background-color');
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 1200px) {
+  .main__title {
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
 .one {
   padding-bottom: 0px;
+}
+.one--clear {
+  padding: 0;
 }
 .tile {
   @extend %center;
@@ -50,15 +237,47 @@
 }
 .article {
   &__items {
+    max-width: 450px;
     margin-top: 30px;
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    &__items {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0px;
+      max-width: 354px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__items {
+      display: flex;
+      max-width: 270px;
+    }
   }
   &__title {
+    text-align: center;
     font-weight: 700px;
     margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    &__title {
+      text-align: left;
+    }
   }
   &__text {
     line-height: 1.71;
     color: getColor('secondary-color');
+  }
+}
+.only-desktop {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .only-desktop {
+    display: flex;
   }
 }
 .description-gallery {
@@ -83,14 +302,45 @@
   background-color: #f5f4fa;
 }
 .team {
-  @include grid(30px, 4);
-
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .team {
+    @include grid-tablet(30px, 2);
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    @include grid(30px, 4);
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
+.team {
   &__image {
+    max-width: 450px;
+    margin-bottom: 30px;
     background-color: getColor('background-color');
-    height: 428px;
+    height: 622px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+  }
+  @media screen and (min-width: 768px) {
+    &__image {
+      max-width: 354px;
+      margin-bottom: 0;
+      height: 536px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__image {
+      max-width: 270px;
+      height: 428px;
+      margin-bottom: 0px;
+    }
   }
   &__name {
     font-size: 16px;
@@ -114,14 +364,39 @@
     border-radius: 4px;
     @include transition(color);
     @include transition(transform);
-
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include transition(border);
+    width: 201px;
+  }
+  @media screen and (min-width: 768px) {
+    &__tile {
+      width: 226px;
     }
-    &:hover,
-    &:focus {
-      fill: getColor('checkmark-color');
-      border: 1px solid getColor('checkmark-color');
+  }
+  @media screen and (min-width: 1200px) {
+    &__tile {
+      width: 170px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+  }
+  &__tile:hover,
+  &__tile:focus {
+    fill: getColor('checkmark-color');
+    border: 1px solid getColor('checkmark-color');
+    transform: scale(1.15);
+  }
+  @media screen and (min-width: 768px) {
+    &__tile:hover,
+    &__tile:focus {
+      transform: scale(1.15);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__tile:hover,
+    &__tile:focus {
       transform: scale(1.15);
     }
   }

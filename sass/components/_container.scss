@@ -2,8 +2,25 @@
 @import '../utils/mixins';
 
 .container {
-  width: $main-width;
-  padding: $main-padding;
-  align-items: center;
-  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    padding: $main-padding;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: $main-padding;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: $main-padding;
+  }
 }

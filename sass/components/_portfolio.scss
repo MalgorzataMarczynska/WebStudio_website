@@ -2,18 +2,42 @@
 @import '../utils/mixins';
 
 .section__gallery-cards {
-  padding-top: 50px;
+  padding-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .section__gallery-cards {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__gallery-cards {
+    padding-top: 50px;
+  }
 }
 .gallery-cards {
-  @include grid(30px, 3);
-  flex-wrap: wrap;
+  display: block;
+  list-style: none;
+}
 
+@media screen and (min-width: 768px) {
+  .gallery-cards {
+    @include grid-tablet(30px, 2);
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-cards {
+    @include grid(30px, 3);
+  }
+}
+.gallery-cards {
   &__item {
-    width: 370px;
+    max-width: 450px;
     height: 404px;
     background-color: getColor('background-color');
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
 
     &:hover,
     &:focus {
@@ -22,10 +46,27 @@
       cursor: pointer;
     }
   }
+  @media screen and (min-width: 768px) {
+    &__item {
+      max-width: 354px;
+      margin-bottom: 0;
+    }
+    &__item:last-child {
+      margin-left: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__item {
+      max-width: 370px;
+    }
+  }
   &__image {
     position: relative;
     height: 294px;
     overflow: hidden;
+  }
+  .gallery-card__image img {
+    height: 294px;
   }
   &__overlay {
     position: absolute;
@@ -34,12 +75,21 @@
     right: 0;
     width: 100%;
     height: 100%;
-    padding: 49px 45px 49px 24px;
+    padding: 77px 24px;
     background-color: rgba(33, 150, 243, 0.9);
     transform: translatey(100%);
     @include transition(transform);
   }
-
+  @media screen and (min-width: 768px) {
+    &__overlay {
+      padding: 49px 24px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__overlay {
+      padding: 49px 45px 49px 24px;
+    }
+  }
   &__item:hover &__overlay {
     transform: translatey(0);
   }

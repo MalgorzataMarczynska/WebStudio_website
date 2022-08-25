@@ -107,18 +107,16 @@
                   class="policy__checkbox"
                   required
                 />
-                <svg class="policy__check-icon" width="15" height="13">
-                  <use
-                    href="images/icomoon/sprite/icons.svg#icon-check-sign"
-                  ></use>
-                </svg>
               </div>
               <label for="policy-checkbox" class="policy__label"
                 >Oświadczam, iż akceptuję
                 <a class="policy__link" href="/">Regulamin</a> i
-                <a class="policy__link" href="/">Politykę Prywatności</a
-                >.</label
-              >
+                <a class="policy__link" href="/">Politykę Prywatności</a>.
+                <svg class="policy__check-icon" width="15" height="13">
+                  <use
+                    href="images/icomoon/sprite/icons.svg#icon-check-sign"
+                  ></use></svg
+              ></label>
             </div>
             <button class="btn btn--submit" type="submit">Wyślij</button>
           </div>
@@ -127,11 +125,75 @@
     </div>
     <header class="header">
       <div class="container">
+        <div class="mobile">
+          <a class="header__logo" href="/"
+            ><span class="logo logo--blue">Web</span
+            ><span class="logo logo--black">Studio</span></a
+          >
+          <button type="button" class="js-open-menu">
+            <svg class="mobile__icon" width="30" height="30">
+              <use href="images/icomoon/sprite/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="js-menu-container is-open">
+            <div class="mobile__modal modal--menu">
+              <button type="button" class="mobile__modal-x js-close-menu">
+                X
+              </button>
+              <nav>
+                <ul class="mobile__navigation">
+                  <li class="mobile__item">
+                    <a class="mobile__link link__active" href="index.html"
+                      >Agencja</a
+                    >
+                  </li>
+                  <li class="mobile__item">
+                    <a class="mobile__link" href="portfolio.html">Portfolio</a>
+                  </li>
+                  <li class="mobile__item">
+                    <a class="mobile__link" href="/kontakt">Kontakt</a>
+                  </li>
+                </ul>
+              </nav>
+              <ul class="mobile__contact">
+                <li class="contact__item">
+                  <a
+                    class="mobile__link mobile__link--phone"
+                    href="tel.:+48111111111"
+                    >+48 111 111 111</a
+                  >
+                </li>
+                <li class="contact__item">
+                  <a
+                    class="mobile__link mobile__link--mail"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mobile__social-media">
+                <li class="social-media__item">
+                  <a class="social-media__link" href="/">Instagram</a>
+                </li>
+                <li class="social-media__item">
+                  <a class="social-media__link" href="/">Twitter</a>
+                </li>
+                <li class="social-media__item">
+                  <a class="social-media__link" href="/">Facebook</a>
+                </li>
+                <li class="social-media__item">
+                  <a class="social-media__link" href="/">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="header__menu">
           <a class="header__logo" href="/"
             ><span class="logo logo--blue">Web</span
             ><span class="logo logo--black">Studio</span></a
           >
+
           <nav class="header__navigation">
             <ul class="navigation">
               <li class="navigation__item">
@@ -171,87 +233,79 @@
           </ul>
         </div>
       </div>
-      <div class="header__image background">
-        <div class="container">
-          <div class="header__main">
-            <h1 class="header__title main__title">
-              Efektywne rozwiązania dla waszego biznesu
-            </h1>
-            <button type="button" class="btn btn--main" data-modal-open>
-              Zamów usługę
-            </button>
-          </div>
-        </div>
-      </div>
     </header>
     <main>
-      <section class="section one">
-        <div class="container">
-          <div>
-            <ul class="section__tile">
-              <li class="tile">
-                <svg class="tile__vector" width="70" height="70">
-                  <use
-                    href="images/icomoon/sprite/icons.svg#icon-antenna-1"
-                  ></use>
-                </svg>
-              </li>
-              <li class="tile">
-                <svg class="tile__vector" width="70" height="70">
-                  <use
-                    href="images/icomoon/sprite/icons.svg#icon-clock-1"
-                  ></use>
-                </svg>
-              </li>
-              <li class="tile">
-                <svg class="tile__vector" width="70" height="70">
-                  <use
-                    href="images/icomoon/sprite/icons.svg#icon-diagram-1"
-                  ></use>
-                </svg>
-              </li>
-              <li class="tile">
-                <svg class="tile__vector" width="70" height="70">
-                  <use
-                    href="images/icomoon/sprite/icons.svg#icon-astronaut-1"
-                  ></use>
-                </svg>
-              </li>
-            </ul>
+      <section class="section one one--clear">
+        <div class="section__image background">
+          <div class="container">
+            <div class="section__main">
+              <h1 class="section__title main__title">
+                Efektywne rozwiązania dla waszego biznesu
+              </h1>
+              <button type="button" class="btn btn--main" data-modal-open>
+                Zamów usługę
+              </button>
+            </div>
           </div>
-          <ul class="section__article">
-            <li class="article__items">
-              <h3 class="article__title">LOREM IPSUM</h3>
-              <p class="article__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
-            </li>
-            <li class="article__items">
-              <h3 class="article__title">LOREM IPSUM</h3>
-              <p class="article__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
-            </li>
-            <li class="article__items">
-              <h3 class="article__title">LOREM IPSUM</h3>
-              <p class="article__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
-            </li>
-            <li class="article__items">
-              <h3 class="article__title">LOREM IPSUM</h3>
-              <p class="article__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
-            </li>
-          </ul>
         </div>
+        <ul class="section__article">
+          <li class="article__items">
+            <div class="tile">
+              <svg class="tile__vector" width="70" height="70">
+                <use
+                  href="images/icomoon/sprite/icons.svg#icon-antenna-1"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="article__title">LOREM IPSUM</h3>
+            <p class="article__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+              arcu sem. Sed non sodales dui. Interdum et malesuada
+            </p>
+          </li>
+          <li class="article__items">
+            <div class="tile">
+              <svg class="tile__vector" width="70" height="70">
+                <use href="images/icomoon/sprite/icons.svg#icon-clock-1"></use>
+              </svg>
+            </div>
+            <h3 class="article__title">LOREM IPSUM</h3>
+            <p class="article__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+              arcu sem. Sed non sodales dui. Interdum et malesuada
+            </p>
+          </li>
+          <li class="article__items">
+            <div class="tile">
+              <svg class="tile__vector" width="70" height="70">
+                <use
+                  href="images/icomoon/sprite/icons.svg#icon-diagram-1"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="article__title">LOREM IPSUM</h3>
+            <p class="article__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+              arcu sem. Sed non sodales dui. Interdum et malesuada
+            </p>
+          </li>
+          <li class="article__items">
+            <div class="tile">
+              <svg class="tile__vector" width="70" height="70">
+                <use
+                  href="images/icomoon/sprite/icons.svg#icon-astronaut-1"
+                ></use>
+              </svg>
+            </div>
+            <h3 class="article__title">LOREM IPSUM</h3>
+            <p class="article__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+              arcu sem. Sed non sodales dui. Interdum et malesuada
+            </p>
+          </li>
+        </ul>
       </section>
-      <section class="section">
+      <section class="section only-desktop">
         <div class="container">
           <h2 class="section__title">Czym się zajmujemy?</h2>
           <ul class="section__description-gallery">
@@ -262,6 +316,7 @@
                 alt="Man is writing computer code"
                 width="370"
                 height="294"
+                srcset="images/programmmer_opt@2x.jpg 2x"
               />
               <p class="description-gallery__label">aplikacje komputerowe</p>
             </li>
@@ -272,6 +327,7 @@
                 alt="Woman comparing application design with mobile and desktop"
                 width="370"
                 height="294"
+                srcset="images/ui_design_opt@2x.jpg 2x"
               />
               <p class="description-gallery__label">aplikacje mobilne</p>
             </li>
@@ -282,6 +338,7 @@
                 alt="Tablet with polygonal color palette"
                 width="370"
                 height="294"
+                srcset="images/creative_webdesign_opt@2x.jpg 2x"
               />
               <p class="description-gallery__label">rozwiązania graficzne</p>
             </li>
@@ -296,12 +353,33 @@
               <ul class="team section__description-gallery">
                 <li class="team__image">
                   <figure>
-                    <img
-                      src="images/product_designer_opt.jpg"
-                      alt="Photo our product designer"
-                      width="270"
-                      height="260"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/team/product_designer_opt_mobile-450.jpg    1x,
+                          ./images/team/product_designer_opt_mobile-450@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/team/product_designer_opt_tablet-354.jpg    1x,
+                          ./images/team/product_designer_opt_tablet-354@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/team/product_designer_opt_desktop-270.jpg    1x,
+                          ./images/team/product_designer_opt_desktop-270@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="./images/team/product_designer_opt_mobile-450.jpg"
+                        alt="Photo our product designer"
+                      />
+                    </picture>
                     <figcaption>
                       <div class="team__name">John Doe</div>
                       <div class="team__speciality">Product Manager</div>
@@ -340,12 +418,33 @@
                 </li>
                 <li class="team__image">
                   <figure>
-                    <img
-                      src="images/frontend_developer_opt.jpg"
-                      alt="Photo our frontend developer"
-                      width="270"
-                      height="260"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/team/frontend_developer_opt_mobile-450.jpg    1x,
+                          ./images/team/frontend_developer_opt_mobile-450@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/team/frontend_developer_opt_tablet-354.jpg    1x,
+                          ./images/team/frontend_developer_opt_tablet-354@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/team/frontend_developer_opt_desktop-270.jpg    1x,
+                          ./images/team/frontend_developer_opt_desktop-270@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="./images/team/frontend_developer_opt_mobile-450.jpg"
+                        alt="Photo our frontend_developer"
+                      />
+                    </picture>
                     <figcaption>
                       <div class="team__name">Jane Doe</div>
                       <div class="team__speciality">Frontend Developer</div>
@@ -384,12 +483,33 @@
                 </li>
                 <li class="team__image">
                   <figure>
-                    <img
-                      src="images/marketing_opt.jpg"
-                      alt="Photo our marketing specialist"
-                      width="270"
-                      height="260"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/team/marketing_opt_mobile-450.jpg    1x,
+                          ./images/team/marketing_opt_mobile-450@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/team/marketing_opt_tablet-354.jpg    1x,
+                          ./images/team/marketing_opt_tablet-354@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/team/marketing_opt_desktop-270.jpg    1x,
+                          ./images/team/marketing_opt_desktop-270@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="./images/team/marketing_opt_mobile-450.jpg"
+                        alt="Photo our marketing leader"
+                      />
+                    </picture>
                     <figcaption>
                       <div class="team__name">John Doe</div>
                       <div class="team__speciality">Marketing</div>
@@ -428,12 +548,33 @@
                 </li>
                 <li class="team__image">
                   <figure>
-                    <img
-                      src="images/ui_designer_opt.jpg"
-                      alt="Photo our UI designer"
-                      width="270"
-                      height="260"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/team/ui_designer_opt_mobile-450.jpg    1x,
+                          ./images/team/ui_designer_opt_mobile-450@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/team/ui_designer_opt_tablet-354.jpg    1x,
+                          ./images/team/ui_designer_opt_tablet-354@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/team/ui_designer_opt_desktop-270.jpg    1x,
+                          ./images/team/ui_designer_opt_desktop-270@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="./images/team/ui_designer_opt_mobile-450.jpg"
+                        alt="Photo our ui_designer"
+                      />
+                    </picture>
                     <figcaption>
                       <div class="team__name">John Doe</div>
                       <div class="team__speciality">UI Designer</div>
@@ -516,65 +657,67 @@
     <footer class="footer">
       <div class="blue background">
         <div class="container">
-          <div class="footer__address">
-            <ul class="address">
-              <li>
-                <a class="address__logo" href="/"
-                  ><span class="logo logo--blue">Web</span
-                  ><span class="logo logo--white">Studio</span></a
-                >
-              </li>
-              <li>
-                <address class="address__work-place">
-                  m. Warszawa, Aleje Jerozolimskie 21
-                </address>
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="tel.:+48111111111"
-                  >+48 111 111 111</a
-                >
-              </li>
-            </ul>
-            <div class="footer__social-contact">
-              <h4 class="social-contact__title">Dołącz do nas</h4>
-              <ul class="social-contact__icons">
-                <li class="social-icon__tile social-icon__tile--footer">
-                  <svg width="20" height="20">
-                    <use
-                      href="images/icomoon/sprite/icons.svg#icon-instagram"
-                    ></use>
-                  </svg>
+          <div class="footer__base">
+            <div class="footer__address">
+              <ul class="address">
+                <li>
+                  <a class="address__logo" href="/"
+                    ><span class="logo logo--blue">Web</span
+                    ><span class="logo logo--white">Studio</span></a
+                  >
                 </li>
-                <li class="social-icon__tile social-icon__tile--footer">
-                  <svg width="20" height="20">
-                    <use
-                      href="images/icomoon/sprite/icons.svg#icon-twitter"
-                    ></use>
-                  </svg>
+                <li>
+                  <address class="address__work-place">
+                    m. Warszawa, Aleje Jerozolimskie 21
+                  </address>
                 </li>
-                <li class="social-icon__tile social-icon__tile--footer">
-                  <svg width="20" height="20">
-                    <use
-                      href="images/icomoon/sprite/icons.svg#icon-facebook"
-                    ></use>
-                  </svg>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
                 </li>
-                <li class="social-icon__tile social-icon__tile--footer">
-                  <svg width="20" height="20">
-                    <use
-                      href="images/icomoon/sprite/icons.svg#icon-linkedin2"
-                    ></use>
-                  </svg>
+                <li class="address__item">
+                  <a class="address__link" href="tel.:+48111111111"
+                    >+48 111 111 111</a
+                  >
                 </li>
               </ul>
+              <div class="footer__social-contact">
+                <h4 class="social-contact__title">Dołącz do nas</h4>
+                <ul class="social-contact__icons">
+                  <li class="social-icon__tile social-icon__tile--footer">
+                    <svg width="20" height="20">
+                      <use
+                        href="images/icomoon/sprite/icons.svg#icon-instagram"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="social-icon__tile social-icon__tile--footer">
+                    <svg width="20" height="20">
+                      <use
+                        href="images/icomoon/sprite/icons.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="social-icon__tile social-icon__tile--footer">
+                    <svg width="20" height="20">
+                      <use
+                        href="images/icomoon/sprite/icons.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="social-icon__tile social-icon__tile--footer">
+                    <svg width="20" height="20">
+                      <use
+                        href="images/icomoon/sprite/icons.svg#icon-linkedin2"
+                      ></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="footer__contact-form">
-              <form>
+              <form class="contact-form">
                 <label class="contact-form__label" for="newsletter-usermail"
                   >zapisz się do newslettera</label
                 >
@@ -602,6 +745,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/mobile-menu.js"></script>
     <script src="js/modal.js"></script>
   </body>
 </html>

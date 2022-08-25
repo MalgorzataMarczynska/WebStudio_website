@@ -17,7 +17,7 @@
     padding: 10px 76px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     position: absolute;
-    right: 264px;
+    right: 225px;
     transform: translateX(50%);
     @include transition(box shadow);
 
@@ -26,6 +26,11 @@
       box-shadow: 2px 2px 4px 2px rgba(2, 4, 44, 0.5) inset,
         -3px -3px 2px 2px rgba(187, 189, 231, 0.35) inset,
         4px 4px 4px rgba(30, 2, 131, 0.25);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &--submit {
+      right: 264px;
     }
   }
   &--main {
@@ -56,7 +61,6 @@
     @include transition-delay(box shadow);
     @include transition-delay(border-radius);
     @include transition-delay(font);
-
     &:hover,
     &:focus {
       transform: scale(1.05);
@@ -65,14 +69,21 @@
     }
   }
 }
+
 .btn--contact-form__icon {
   margin-left: 24px;
 }
 .section__btn-menu {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   font-size: 0;
+}
+@media screen and(min-width: 768px) {
+  .section__btn-menu {
+    justify-content: center;
+  }
 }
 .btn-menu:not(:last-child) {
   margin-right: 8px;
@@ -83,7 +94,8 @@
   color: getColor('brand-color');
   background-color: #f5f4fa;
   border: #f5f4fa;
-  padding: 6px 22px;
+  padding: 6px 35px;
+  margin-bottom: 15px;
   @include transition(transform);
   @include transition(box shadow);
   @include transition(background-color);
@@ -97,5 +109,11 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
     transform: scale(1.1);
     cursor: pointer;
+  }
+}
+@media screen and (min-width: 769px) {
+  .btn--menu-item {
+    padding: 6px 22px;
+    margin-bottom: 0px;
   }
 }

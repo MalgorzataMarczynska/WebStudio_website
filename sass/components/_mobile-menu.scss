@@ -1,0 +1,179 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+.js-open-menu {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-color: getColor('background-color');
+}
+@media screen and (min-width: 768px) {
+  .js-open-menu {
+    display: none;
+  }
+}
+.is-open {
+  visibility: 1;
+  opacity: 1;
+  transform: scaleY(0);
+}
+.js-menu-container {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: getColor('background-color');
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .js-menu-container {
+    display: none;
+  }
+}
+.js-close-menu {
+  width: 40px;
+  height: 40px;
+  background-color: getColor('background-color');
+  font-family: $main-font, $logo-font, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  @include transition-delay(background-color);
+  @include transition-delay(transform);
+  @include transition-delay(box-shadow);
+  &:hover,
+  &:focus {
+    color: getColor('checkmark-color');
+  }
+}
+.modal--menu {
+  background-color: getColor('background-color');
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  opacity: 1;
+  cursor: pointer;
+  transform: scaleY(1);
+}
+@media screen and (min-width: 768px) {
+  .modal--menu {
+    display: none;
+  }
+}
+.mobile {
+  &__modal {
+    padding: 40px 48px;
+    box-sizing: border-box;
+    width: 480px;
+    height: 796px;
+    margin: auto;
+    position: relative;
+  }
+  &__modal-x {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 12px 8px 10px 10px;
+  }
+  &__icon {
+    fill: getColor('brand-color');
+    background-color: getColor('background-color');
+    @include transition(color);
+    @include transition(transform);
+    &:hover,
+    &:focus {
+      fill: getColor('checkmark-color');
+      transform: scale(1.15);
+    }
+  }
+  &__contact {
+    margin-top: 302px;
+    margin-bottom: 64px;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__item {
+    @include transition-delay(transform);
+    @include transition-delay(color);
+    &:hover,
+    &:focus {
+      transform: translateX(5%);
+    }
+  }
+  &__link {
+    font-size: 40px;
+    font-weight: 500;
+    color: getColor('brand-color');
+    text-decoration: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: getColor('checkmark-color');
+    }
+
+    &--phone {
+      color: getColor('checkmark-color');
+    }
+    &--mail {
+      font-size: 24px;
+      color: getColor('secondary-color');
+    }
+  }
+}
+.link__active {
+  color: getColor('checkmark-color');
+}
+.contact__item {
+  @include transition-delay(transform);
+  @include transition-delay(color);
+  &:hover,
+  &:focus {
+    color: getColor('checkmark-color');
+    transform: translateX(5%);
+  }
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.social-media {
+  &__item {
+    display: inline;
+
+    &:not(:first-child) {
+      border-left: 1px solid rgba(33, 33, 33, 0.2);
+      padding: 0 10px;
+    }
+    &:first-child {
+      padding-right: 10px;
+    }
+  }
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: getColor('checkmark-color');
+    text-decoration: none;
+    @include transition-delay(color);
+    &:hover,
+    &:focus {
+      color: rgb(83, 4, 4);
+    }
+  }
+}

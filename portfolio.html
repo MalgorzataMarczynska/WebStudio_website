@@ -27,6 +27,69 @@
   <body>
     <header class="header">
       <div class="container">
+        <div class="mobile">
+          <a class="header__logo" href="/"
+            ><span class="logo logo--blue">Web</span
+            ><span class="logo logo--black">Studio</span></a
+          >
+          <button type="button" class="js-open-menu">
+            <svg class="mobile__icon" width="30" height="30">
+              <use href="images/icomoon/sprite/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="js-menu-container is-open">
+            <div class="mobile__modal modal--menu">
+              <button type="button" class="mobile__modal-x js-close-menu">
+                X
+              </button>
+              <nav>
+                <ul class="mobile__navigation">
+                  <li class="mobile__item">
+                    <a class="mobile__link" href="index.html">Agencja</a>
+                  </li>
+                  <li class="mobile__item">
+                    <a class="mobile__link link__active" href="portfolio.html"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li class="mobile__item">
+                    <a class="mobile__link" href="/kontakt">Kontakt</a>
+                  </li>
+                </ul>
+              </nav>
+              <ul class="mobile__contact">
+                <li class="contact__item">
+                  <a
+                    class="mobile__link mobile__link--phone"
+                    href="tel.:+48111111111"
+                    >+48 111 111 111</a
+                  >
+                </li>
+                <li class="contact__item">
+                  <a
+                    class="mobile__link mobile__link--mail"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mobile__social-media">
+                <li class="social-media__item">
+                  <a class="social-media__link" href="/">Instagram</a>
+                </li>
+                <li class="social-media__item">
+                  <a class="social-media__link" href="/">Twitter</a>
+                </li>
+                <li class="social-media__item">
+                  <a class="social-media__link" href="/">Facebook</a>
+                </li>
+                <li class="social-media__item">
+                  <a class="social-media__link" href="/">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="header__menu">
           <a class="header__logo" href="/"
             ><span class="logo logo--blue">Web</span
@@ -107,12 +170,33 @@
               <li class="gallery-cards__item">
                 <figure>
                   <div class="gallery-cards__image">
-                    <img
-                      src="images/portfolio1.jpg"
-                      alt="Website of Technocrack"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/portfolio/portfolio1_mobile.jpg    1x,
+                          images/portfolio/portfolio1_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio1_tablet.jpg    1x,
+                          images/portfolio/portfolio1_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio1_desktop.jpg    1x,
+                          images/portfolio/portfolio1_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="images/portfolio/portfolio1_mobile.jpg"
+                        alt="Website of Technocrack"
+                      />
+                    </picture>
                     <div class="gallery-cards__overlay">
                       <p class="overlay__text">
                         Technocrack jest popularną platformą wykorzystywaną do
@@ -135,12 +219,33 @@
               <li class="gallery-cards__item">
                 <figure>
                   <div class="gallery-cards__image">
-                    <img
-                      src="images/portfolio2.jpg"
-                      alt="Poster of New Orlean vs Golden Star match"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/portfolio/portfolio2_mobile.jpg    1x,
+                          images/portfolio/portfolio2_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio2_tablet.jpg    1x,
+                          images/portfolio/portfolio2_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio2_desktop.jpg    1x,
+                          images/portfolio/portfolio2_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="images/portfolio/portfolio2_mobile.jpg"
+                        alt="Poster of New Orlean vs Golden Star match"
+                      />
+                    </picture>
                     <div class="gallery-cards__overlay">
                       <p class="overlay__text">
                         Technocrack jest popularną platformą wykorzystywaną do
@@ -163,12 +268,33 @@
               <li class="gallery-cards__item">
                 <figure>
                   <div class="gallery-cards__image">
-                    <img
-                      src="images/portfolio3.jpg"
-                      alt="Logo of Seafood Restaurant"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/portfolio/portfolio3_mobile.jpg    1x,
+                          images/portfolio/portfolio3_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio3_tablet.jpg    1x,
+                          images/portfolio/portfolio3_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio3_desktop.jpg    1x,
+                          images/portfolio/portfolio3_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="images/portfolio/portfolio3_mobile.jpg"
+                        alt="Logo of Seafood Restaurant"
+                      />
+                    </picture>
                     <div class="gallery-cards__overlay">
                       <p class="overlay__text">
                         Technocrack jest popularną platformą wykorzystywaną do
@@ -191,12 +317,33 @@
               <li class="gallery-cards__item">
                 <figure>
                   <div class="gallery-cards__image">
-                    <img
-                      src="images/portfolio4.jpg"
-                      alt="Earphones"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/portfolio/portfolio4_mobile.jpg    1x,
+                          images/portfolio/portfolio4_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio4_tablet.jpg    1x,
+                          images/portfolio/portfolio4_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio4_desktop.jpg    1x,
+                          images/portfolio/portfolio4_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="images/portfolio/portfolio4_mobile.jpg"
+                        alt="Earphones"
+                      />
+                    </picture>
                     <div class="gallery-cards__overlay">
                       <p class="overlay__text">
                         Technocrack jest popularną platformą wykorzystywaną do
@@ -217,12 +364,33 @@
               <li class="gallery-cards__item">
                 <figure>
                   <div class="gallery-cards__image">
-                    <img
-                      src="images/portfolio5.jpg"
-                      alt="A pair of boxes"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/portfolio/portfolio5_mobile.jpg    1x,
+                          images/portfolio/portfolio5_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio5_tablet.jpg    1x,
+                          images/portfolio/portfolio5_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio5_desktop.jpg    1x,
+                          images/portfolio/portfolio5_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="images/portfolio/portfolio5_mobile.jpg"
+                        alt="A pair of boxes"
+                      />
+                    </picture>
                     <div class="gallery-cards__overlay">
                       <p class="overlay__text">
                         Technocrack jest popularną platformą wykorzystywaną do
@@ -243,12 +411,33 @@
               <li class="gallery-cards__item">
                 <figure>
                   <div class="gallery-cards__image">
-                    <img
-                      src="images/portfolio6.jpg"
-                      alt="Computer monitor with website Inspiration has no Borders"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/portfolio/portfolio6_mobile.jpg    1x,
+                          images/portfolio/portfolio6_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio6_tablet.jpg    1x,
+                          images/portfolio/portfolio6_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio6_desktop.jpg    1x,
+                          images/portfolio/portfolio6_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="images/portfolio/portfolio6_mobile.jpg"
+                        alt="Computer monitor with website Inspiration has no Borders"
+                      />
+                    </picture>
                     <div class="gallery-cards__overlay">
                       <p class="overlay__text">
                         Technocrack jest popularną platformą wykorzystywaną do
@@ -273,12 +462,33 @@
               <li class="gallery-cards__item">
                 <figure>
                   <div class="gallery-cards__image">
-                    <img
-                      src="images/portfolio7.jpg"
-                      alt="Pages of Limited Edition Magazine"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/portfolio/portfolio7_mobile.jpg    1x,
+                          images/portfolio/portfolio7_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio7_tablet.jpg    1x,
+                          images/portfolio/portfolio7_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio7_desktop.jpg    1x,
+                          images/portfolio/portfolio7_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="images/portfolio/portfolio7_mobile.jpg"
+                        alt="Pages of Limited Edition Magazine"
+                      />
+                    </picture>
                     <div class="gallery-cards__overlay">
                       <p class="overlay__text">
                         Technocrack jest popularną platformą wykorzystywaną do
@@ -301,12 +511,33 @@
               <li class="gallery-cards__item">
                 <figure>
                   <div class="gallery-cards__image">
-                    <img
-                      src="images/portfolio8.jpg"
-                      alt="Clothes label"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/portfolio/portfolio8_mobile.jpg    1x,
+                          images/portfolio/portfolio8_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio8_tablet.jpg    1x,
+                          images/portfolio/portfolio8_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio8_desktop.jpg    1x,
+                          images/portfolio/portfolio8_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="images/portfolio/portfolio8_mobile.jpg"
+                        alt="Clothes label"
+                      />
+                    </picture>
                     <div class="gallery-cards__overlay">
                       <p class="overlay__text">
                         Technocrack jest popularną platformą wykorzystywaną do
@@ -327,12 +558,33 @@
               <li class="gallery-cards__item">
                 <figure>
                   <div class="gallery-cards__image">
-                    <img
-                      src="images/portfolio9.jpg"
-                      alt="Notebook with Growing Business aplication on it"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          images/portfolio/portfolio9_mobile.jpg    1x,
+                          images/portfolio/portfolio9_mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio9_tablet.jpg    1x,
+                          images/portfolio/portfolio9_tablet@2x.jpg 2x
+                        "
+                        media="(max-width: 1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/portfolio/portfolio9_desktop.jpg    1x,
+                          images/portfolio/portfolio9_desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <img
+                        src="images/portfolio/portfolio9_mobile.jpg"
+                        alt="Notebook with Growing Business aplication on it"
+                      />
+                    </picture>
                     <div class="gallery-cards__overlay">
                       <p class="overlay__text">
                         Technocrack jest popularną platformą wykorzystywaną do
@@ -358,65 +610,67 @@
     <footer class="footer">
       <div class="blue background">
         <div class="container">
-          <div class="footer__address">
-            <ul class="address">
-              <li>
-                <a class="address__logo" href="/"
-                  ><span class="logo logo--blue">Web</span
-                  ><span class="logo logo--white">Studio</span></a
-                >
-              </li>
-              <li>
-                <address class="address__work-place">
-                  m. Warszawa, Aleje Jerozolimskie 21
-                </address>
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="address__item">
-                <a class="address__link" href="tel.:+48111111111"
-                  >+48 111 111 111</a
-                >
-              </li>
-            </ul>
-            <div class="footer__social-contact">
-              <h4 class="social-contact__title">Dołącz do nas</h4>
-              <ul class="social-contact__icons">
-                <li class="social-icon__tile social-icon__tile--footer">
-                  <svg width="20" height="20">
-                    <use
-                      href="images/icomoon/sprite/icons.svg#icon-instagram"
-                    ></use>
-                  </svg>
+          <div class="footer__base">
+            <div class="footer__address">
+              <ul class="address">
+                <li>
+                  <a class="address__logo" href="/"
+                    ><span class="logo logo--blue">Web</span
+                    ><span class="logo logo--white">Studio</span></a
+                  >
                 </li>
-                <li class="social-icon__tile social-icon__tile--footer">
-                  <svg width="20" height="20">
-                    <use
-                      href="images/icomoon/sprite/icons.svg#icon-twitter"
-                    ></use>
-                  </svg>
+                <li>
+                  <address class="address__work-place">
+                    m. Warszawa, Aleje Jerozolimskie 21
+                  </address>
                 </li>
-                <li class="social-icon__tile social-icon__tile--footer">
-                  <svg width="20" height="20">
-                    <use
-                      href="images/icomoon/sprite/icons.svg#icon-facebook"
-                    ></use>
-                  </svg>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
                 </li>
-                <li class="social-icon__tile social-icon__tile--footer">
-                  <svg width="20" height="20">
-                    <use
-                      href="images/icomoon/sprite/icons.svg#icon-linkedin2"
-                    ></use>
-                  </svg>
+                <li class="address__item">
+                  <a class="address__link" href="tel.:+48111111111"
+                    >+48 111 111 111</a
+                  >
                 </li>
               </ul>
+              <div class="footer__social-contact">
+                <h4 class="social-contact__title">Dołącz do nas</h4>
+                <ul class="social-contact__icons">
+                  <li class="social-icon__tile social-icon__tile--footer">
+                    <svg width="20" height="20">
+                      <use
+                        href="images/icomoon/sprite/icons.svg#icon-instagram"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="social-icon__tile social-icon__tile--footer">
+                    <svg width="20" height="20">
+                      <use
+                        href="images/icomoon/sprite/icons.svg#icon-twitter"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="social-icon__tile social-icon__tile--footer">
+                    <svg width="20" height="20">
+                      <use
+                        href="images/icomoon/sprite/icons.svg#icon-facebook"
+                      ></use>
+                    </svg>
+                  </li>
+                  <li class="social-icon__tile social-icon__tile--footer">
+                    <svg width="20" height="20">
+                      <use
+                        href="images/icomoon/sprite/icons.svg#icon-linkedin2"
+                      ></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="footer__contact-form">
-              <form>
+              <form class="contact-form">
                 <label class="contact-form__label" for="newsletter-usermail"
                   >zapisz się do newslettera</label
                 >
@@ -444,5 +698,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>
