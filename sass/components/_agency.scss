@@ -7,12 +7,12 @@
   align-items: center;
 }
 .section {
-  padding: 60px 0px;
+  padding: 60px 0;
 }
 
 @media screen and (min-width: 1200px) {
   .section {
-    padding: 94px 0px;
+    padding: 94px 0;
   }
 }
 .section {
@@ -216,7 +216,7 @@
   }
 }
 .one {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 .one--clear {
   padding: 0;
@@ -288,7 +288,7 @@
     position: absolute;
     width: 100%;
     height: 70px;
-    bottom: 0px;
+    bottom: 0;
     background-color: rgba(47, 48, 58, 0.8);
     font-weight: 700;
     color: getColor('background-color');
@@ -339,7 +339,7 @@
     &__image {
       max-width: 270px;
       height: 428px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
   &__name {

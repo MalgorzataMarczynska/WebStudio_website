@@ -27,16 +27,16 @@
   <body>
     <div class="backdrop is-hidden" data-modal>
       <div class="backdrop__modal modal">
-        <button type="button" class="modal__modal-x modal-x" data-modal-close>
+        <button class="modal__modal-x modal-x" type="button" data-modal-close>
           X
         </button>
         <form class="form">
           <div
+            class="form__details"
             role="group"
             aria-labelledby="form-details-head"
-            class="form__details"
           >
-            <span id="form-details-head" class="form__header">
+            <span class="form__header" id="form-details-head">
               Zostaw swoje dane w formularzu poniżej
             </span>
             <label class="form__items">
@@ -47,10 +47,10 @@
                 </svg>
               </span>
               <input
-                type="text"
-                name="username"
-                placeholder="Anna Nowak"
                 class="form__input input"
+                name="username"
+                type="text"
+                placeholder="Anna Nowak"
                 minlength="2"
                 required
               />
@@ -65,10 +65,10 @@
                 </svg>
               </span>
               <input
-                type="tel"
-                name="userphone"
-                placeholder="+48 222 222 222 "
                 class="form__input input"
+                name="userphone"
+                type="tel"
+                placeholder="+48 222 222 222"
                 required
               />
             </label>
@@ -82,29 +82,29 @@
                 </svg>
               </span>
               <input
-                type="email"
-                name="usermail"
-                placeholder="anna.nowak@gmail.com"
                 class="form__input input"
+                name="usermail"
+                type="email"
+                placeholder="anna.nowak@gmail.com"
                 required
               />
             </label>
             <label class="form__items">
               <span class="form__title">Komentarz</span>
               <textarea
+                class="form__textarea input"
                 name="comment"
                 rows="5"
                 placeholder="Wprowadź tekst"
-                class="form__textarea input"
               ></textarea>
             </label>
             <div class="form__policy">
               <div class="policy">
                 <input
-                  type="checkbox"
+                  class="policy__checkbox"
                   name="policy-checkbox"
                   id="policy-checkbox"
-                  class="policy__checkbox"
+                  type="checkbox"
                   required
                 />
               </div>
@@ -130,14 +130,14 @@
             ><span class="logo logo--blue">Web</span
             ><span class="logo logo--black">Studio</span></a
           >
-          <button type="button" class="js-open-menu">
+          <button class="js-open-menu" type="button">
             <svg class="mobile__icon" width="30" height="30">
               <use href="images/icomoon/sprite/icons.svg#icon-menu"></use>
             </svg>
           </button>
           <div class="js-menu-container is-open">
             <div class="mobile__modal modal--menu">
-              <button type="button" class="mobile__modal-x js-close-menu">
+              <button class="mobile__modal-x js-close-menu" type="button">
                 X
               </button>
               <nav>
@@ -242,7 +242,7 @@
               <h1 class="section__title main__title">
                 Efektywne rozwiązania dla waszego biznesu
               </h1>
-              <button type="button" class="btn btn--main" data-modal-open>
+              <button class="btn btn--main" type="button" data-modal-open>
                 Zamów usługę
               </button>
             </div>
@@ -366,7 +366,7 @@
                           ./images/team/product_designer_opt_tablet-354.jpg    1x,
                           ./images/team/product_designer_opt_tablet-354@2x.jpg 2x
                         "
-                        media="(max-width: 1199px)"
+                        media="(min-width: 768px) and (max-width: 1199px)"
                       />
                       <source
                         srcset="
@@ -431,7 +431,7 @@
                           ./images/team/frontend_developer_opt_tablet-354.jpg    1x,
                           ./images/team/frontend_developer_opt_tablet-354@2x.jpg 2x
                         "
-                        media="(max-width: 1199px)"
+                        media="(min-width: 768px) and (max-width: 1199px)"
                       />
                       <source
                         srcset="
@@ -496,7 +496,7 @@
                           ./images/team/marketing_opt_tablet-354.jpg    1x,
                           ./images/team/marketing_opt_tablet-354@2x.jpg 2x
                         "
-                        media="(max-width: 1199px)"
+                        media="(min-width: 768px) and (max-width: 1199px)"
                       />
                       <source
                         srcset="
@@ -561,7 +561,7 @@
                           ./images/team/ui_designer_opt_tablet-354.jpg    1x,
                           ./images/team/ui_designer_opt_tablet-354@2x.jpg 2x
                         "
-                        media="(max-width: 1199px)"
+                        media="(min-width: 768px) and (max-width: 1199px)"
                       />
                       <source
                         srcset="
@@ -723,9 +723,9 @@
                 >
                 <input
                   class="contact-form__email"
-                  type="email"
                   name="newsletter-usermail"
                   id="newsletter-usermail"
+                  type="email"
                   placeholder="E-mail"
                 />
                 <button class="btn btn--contact-form" type="submit">
