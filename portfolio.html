@@ -143,23 +143,47 @@
           <div>
             <ul class="section__btn-menu">
               <li class="btn-menu">
-                <button class="btn btn--menu-item" type="button">
+                <button
+                  class="btn btn--menu-item"
+                  type="button"
+                  data-filter="all"
+                >
                   Wszystkie
                 </button>
               </li>
               <li class="btn-menu">
-                <button class="btn btn--menu-item" type="button">Strony</button>
+                <button
+                  class="btn btn--menu-item"
+                  type="button"
+                  data-filter="pages"
+                >
+                  Strony
+                </button>
               </li>
               <li class="btn-menu">
-                <button class="btn btn--menu-item" type="button">
+                <button
+                  class="btn btn--menu-item"
+                  type="button"
+                  data-filter="app"
+                >
                   Aplikacje
                 </button>
               </li>
               <li class="btn-menu">
-                <button class="btn btn--menu-item" type="button">Dizajn</button>
+                <button
+                  class="btn btn--menu-item"
+                  type="button"
+                  data-filter="design"
+                >
+                  Dizajn
+                </button>
               </li>
               <li class="btn-menu">
-                <button class="btn btn--menu-item" type="button">
+                <button
+                  class="btn btn--menu-item"
+                  type="button"
+                  data-filter="marketing"
+                >
                   Marketing
                 </button>
               </li>
@@ -167,7 +191,7 @@
           </div>
           <div class="section__gallery-cards">
             <ul class="gallery-cards">
-              <li class="gallery-cards__item">
+              <li class="gallery-cards__item" data-filter="pages">
                 <figure>
                   <div class="gallery-cards__image">
                     <picture>
@@ -216,7 +240,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="gallery-cards__item">
+              <li class="gallery-cards__item" data-filter="design">
                 <figure>
                   <div class="gallery-cards__image">
                     <picture>
@@ -262,7 +286,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="gallery-cards__item">
+              <li class="gallery-cards__item" data-filter="app">
                 <figure>
                   <div class="gallery-cards__image">
                     <picture>
@@ -310,7 +334,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="gallery-cards__item">
+              <li class="gallery-cards__item" data-filter="marketing">
                 <figure>
                   <div class="gallery-cards__image">
                     <picture>
@@ -355,7 +379,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="gallery-cards__item">
+              <li class="gallery-cards__item" data-filter="app">
                 <figure>
                   <div class="gallery-cards__image">
                     <picture>
@@ -401,7 +425,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="gallery-cards__item">
+              <li class="gallery-cards__item" data-filter="pages">
                 <figure>
                   <div class="gallery-cards__image">
                     <picture>
@@ -450,7 +474,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="gallery-cards__item">
+              <li class="gallery-cards__item" data-filter="design">
                 <figure>
                   <div class="gallery-cards__image">
                     <picture>
@@ -498,7 +522,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="gallery-cards__item">
+              <li class="gallery-cards__item" data-filter="marketing">
                 <figure>
                   <div class="gallery-cards__image">
                     <picture>
@@ -543,7 +567,7 @@
                   </figcaption>
                 </figure>
               </li>
-              <li class="gallery-cards__item">
+              <li class="gallery-cards__item" data-filter="app">
                 <figure>
                   <div class="gallery-cards__image">
                     <picture>
@@ -685,5 +709,6 @@
       </div>
     </footer>
     <script src="js/mobile-menu.js"></script>
+    <script src="js/filter.js"></script>
   </body>
 </html>
